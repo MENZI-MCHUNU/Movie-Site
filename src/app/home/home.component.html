@@ -1,0 +1,26 @@
+<button class="btn btn-primary"><a routerLink="add-movie">+ Add Movie</a></button>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Category</th>
+    <th scope="col">Rating</th>
+    <th scope="col"></th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of movies">
+    <td>{{item.movie_Name}}</td>
+    <td>{{item.movie_Category}}</td>
+    <td >
+        <div class="row">
+          <div *ngFor=" let name of item.movie_Rating | ratingLoop" class="col-sm-1"><span class="fa fa-star checked"></span></div>
+        </div>
+    </td>
+    <td><button class="btn btn-danger" (click)="editMovie(item)">Edit</button></td>
+    <td><button class="btn btn-danger" (click)="removeItem(item.id)">Delete</button></td>
+  </tr>
+
+  </tbody>
+</table>
