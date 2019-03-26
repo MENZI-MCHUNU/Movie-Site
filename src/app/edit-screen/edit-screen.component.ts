@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {MoviesService} from '../../services/moviesService';
 import {Movie} from '../../services/Movie';
+import { ErrorHandlerService } from '../../services/errorHandlerService';
+
 
 @Component({
   selector: 'app-edit-screen',
@@ -13,11 +15,12 @@ export class EditScreenComponent implements OnInit {
   topics = ['Action', 'Science Fiction', 'Comedy', 'Sport'];
 
   editMovie: FormGroup;
-  submitted = false;
-  success = false;
+ // submitted = false;
+//  success = false;
   movie: Movie;
 
-  constructor(private router: Router, private activeRoute: ActivatedRoute, private data: MoviesService) {}
+  public errorMessage: string ='';
+  constructor(private router: Router, private activeRoute: ActivatedRoute, private data: MoviesService, private errorHandler: ErrorHandlerService) {}
 
   onSubmit(item: Movie) {
 
@@ -26,9 +29,14 @@ export class EditScreenComponent implements OnInit {
     this.data.update(item).subscribe(x => {
       this.router.navigate(['']);
     },
-      error => {
-        console.log(error);
-      });
+    //  error => {
+      //  console.log(error);
+      //}
+      (error) =>{
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      }
+  );
   }
 
   ngOnInit() {
@@ -37,9 +45,15 @@ export class EditScreenComponent implements OnInit {
       if (para.id) {
         this.data.getsingle(para.id).subscribe(x => {
           this.movie = x;
-        }, error =>  {
-          console.log(error);
-        });
+        },
+        // error =>  {
+          //console.log(error);
+        //}
+        (error) =>{
+        this.errorHandler.handleError(error);
+        this.errorMessage = this.errorHandler.errorMessage;
+      }
+      );
       }
     } );
   }

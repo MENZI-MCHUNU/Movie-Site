@@ -26,3 +26,17 @@ C:\Users\MENZI\Desktop\Angular7App\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI
 C:\Users\MENZI\Desktop\Angular7App\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\MENZI\Desktop\Angular7App\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.dll
 C:\Users\MENZI\Desktop\Angular7App\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.pdb
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\bin\Debug\netcoreapp2.1\DapperWebAPI.deps.json
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\bin\Debug\netcoreapp2.1\DapperWebAPI.runtimeconfig.json
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\bin\Debug\netcoreapp2.1\DapperWebAPI.runtimeconfig.dev.json
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\bin\Debug\netcoreapp2.1\DapperWebAPI.dll
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\bin\Debug\netcoreapp2.1\DapperWebAPI.pdb
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.csprojAssemblyReference.cache
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.csproj.CoreCompileInputs.cache
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.RazorAssemblyInfo.cache
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.RazorAssemblyInfo.cs
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.AssemblyInfoInputs.cache
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.AssemblyInfo.cs
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.RazorTargetAssemblyInfo.cache
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.dll
+C:\Users\MENZI\Desktop\Movie-Site\BackeEnd\WebApi\SQL\DapperWebAPI\DapperWebAPI\obj\Debug\netcoreapp2.1\DapperWebAPI.pdb

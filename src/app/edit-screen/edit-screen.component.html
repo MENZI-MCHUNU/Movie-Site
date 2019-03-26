@@ -7,24 +7,27 @@
     <div class="form-group">
       <label class="col-form-label ">Name</label>
       <div class="col-md-6">
-        <input type="text" class="form-control form-control-sm" name="movie_name"
-               placeholder="{{movie.movie_Name}}" [(ngModel)]="movie.movie_Name">
+        <input name="Name"#Name="ngModel"  type="text" class="form-control form-control-sm" 
+               placeholder="{{movie.movie_Name}}" [(ngModel)]="movie.movie_Name" required>
+               <div class="validation-error" *ngIf="Name.invalid && Name.touched">This field is required</div>
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-form-label ">Category</label>
       <div class="col-md-6">
-        <input type="text" class="form-control form-control-sm" name="movie_category"
-               placeholder="{{movie.movie_Category}}" [(ngModel)]="movie.movie_Category">
+        <input name="Category" #Category="ngModel" type="text" class="form-control form-control-sm" 
+               placeholder="{{movie.movie_Category}}" [(ngModel)]="movie.movie_Category" required>
+                 <div class="validation-error" *ngIf="Category.invalid && Category.touched">This field is required</div>
       </div>
     </div>
 
     <div class="form-group">
       <label class="col-form-label ">Rating</label>
       <div class="col-md-6">
-        <input type="number" class="form-control form-control-sm" name="movie_rating"
-               placeholder="{{movie.movie_Rating}}" [(ngModel)]="movie.movie_Rating">
+        <input name="Rating" #Rating ="ngModel" type="number" class="form-control form-control-sm" 
+               placeholder="{{movie.movie_Rating}}" [(ngModel)]="movie.movie_Rating" required>
+               <div class="validation-error" *ngIf="Rating.invalid && Rating.touched">This field is required</div>
       </div>
     </div>
 

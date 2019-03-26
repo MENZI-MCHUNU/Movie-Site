@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MoviesService} from '../../services/moviesService';
 import {Movie} from '../../services/Movie';
 import {catchError} from 'rxjs/operators';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',

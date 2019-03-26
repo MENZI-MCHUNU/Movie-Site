@@ -46,13 +46,27 @@ namespace DapperWebAPI.Data_Access_Layer
 
     public bool InsertMovies(Movies ourMovies)
     {
-      int rowsAffected = this.db.Execute(@"INSERT Movies([Movie_Name],[Movie_Category],[Movie_Rating] ,[Id])  values (@Movie_Name, @Movie_Category, @Movie_Rating, @Id)",new {Movie_Name = ourMovies.Movie_Name, Movie_Category = ourMovies.Movie_Category, Movie_Rating = ourMovies.Movie_Rating, ourMovies.Id });
+      try
+      { 
+        int rowsAffected = this.db.Execute(@"INSERT Movies([Movie_Name],[Movie_Category],[Movie_Rating] ,[Id])  values (@Movie_Name, @Movie_Category, @Movie_Rating, @Id)", new { Movie_Name = ourMovies.Movie_Name, Movie_Category = ourMovies.Movie_Category, Movie_Rating = ourMovies.Movie_Rating, ourMovies.Id });
 
-      if(rowsAffected > 0)
-      {
-        return true;
+        if (rowsAffected > 0)
+        {
+          return true;
+        }
+        return false;
+
+
       }
-      return false;
+      catch (Exception )
+      {
+
+        throw;
+      }
+      
+
+
+
     }
 
     public bool UpdateMovies(Movies ourMovies)

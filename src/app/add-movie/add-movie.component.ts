@@ -5,7 +5,7 @@ import {MoviesService} from '../../services/moviesService';
 import {Movie} from '../../services/Movie';
 import {catchError} from 'rxjs/operators';
 import {ReactiveFormsModule} from '@angular/forms';
-
+import { ErrorHandlerService } from '../../services/errorHandlerService';
 @Component({
   selector: 'app-add-movie',
   templateUrl: './add-movie.component.html',
@@ -13,19 +13,23 @@ import {ReactiveFormsModule} from '@angular/forms';
 })
 export class AddMovieComponent implements OnInit {
 
-   
+  
+
   topics = ['Action', 'Science Fiction', 'Comedy', 'Sport'];
 
   movieForm : FormGroup;
   //submitted = false;
  // success = false;
   movie: Movie;
-  constructor(private formBuilder: FormBuilder, private route: Router, private data: MoviesService) {
-  this.movieForm = this.formBuilder.group({
-     movie_Name: ['',Validators.required],
-     movie_Category: ['',Validators.required],
-     movie_Rating: ['',Validators.required]
-  })
+
+  public errorMessage: string ='';
+
+  constructor(private formBuilder: FormBuilder, private route: Router, private data: MoviesService, private errorHandler: ErrorHandlerService) {
+  //this.movieForm = this.formBuilder.group({
+ //    movie_Name: ['',Validators.required],
+ //    movie_Category: ['',Validators.required],
+//     movie_Rating: ['',Validators.required]
+//  })
   }
 
   ngOnInit() {
@@ -43,10 +47,15 @@ export class AddMovieComponent implements OnInit {
 
     this.data.addSingle(item).subscribe(x => {
       this.route.navigate(['']);
-    }, error => {
-      console.log(error);
-    });
-    
+    },
+    // error => {
+      //console.log(error);
+    //}
+    (error) =>{
+      this.errorHandler.handleError(error);
+      this.errorMessage = this.errorHandler.errorMessage;
+    })
+    //;
   }
 
 
