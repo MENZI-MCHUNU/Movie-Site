@@ -6,4 +6,6 @@ header{
      font-weight: bold;
 }
 
-
+.form-group{
+    float: right;
+}

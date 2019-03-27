@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   public movies: Movie[];
+  searchTerm: string;
   constructor(private data: MoviesService, private router: Router) { }
 
   ngOnInit() {

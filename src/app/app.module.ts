@@ -13,8 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesService } from '../services/moviesService';
 import { ErrorHandlerService } from '../services/errorHandlerService';
 import { RatingLoop } from '../pipe/ratingLoop';
+import { MovieFilter } from '../pipe/movieFilter.pipe';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { NotFoundComponent } from './error-pages/not-found/not-found.component';
     RatingsComponent,
     RatingLoop,
     InternalServerComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MovieFilter
   ],
   imports: [
     BrowserModule,
