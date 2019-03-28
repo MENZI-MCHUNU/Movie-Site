@@ -36,7 +36,7 @@ namespace DapperWebAPI.Data_Access_Layer
 
     public List<Movies> GetMovies()
     {
-      return this.db.Query<Movies>("SELECT * FROM [Movies]").ToList();
+      return this.db.Query<Movies>("SELECT * FROM [Movies] ORDER BY [Movie_Rating] DESC").ToList();
     }
 
     public Movies GetSingleMovies(Guid moviesId)
